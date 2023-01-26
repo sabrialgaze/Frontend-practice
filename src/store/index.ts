@@ -1,4 +1,6 @@
 import { createStore } from 'vuex'
+import cartModule from './cart';
+import productsModule from './products';
 
 export default createStore({
   state: {
@@ -10,5 +12,7 @@ export default createStore({
   actions: {
   },
   modules: {
+    cart: cartModule,
+    products: productsModule,
   }
 })
