@@ -7,7 +7,9 @@
             <li>
                 <router-link :to="{name: 'profile'}">Profile</router-link>
             </li>
-            <div class="cart-button"><button @click="toggleCart" class="btn btn-secondary">Cart</button></div>
+            <div class="cart-button">
+                <button @click="toggleCart" class="btn btn-secondary">Cart</button>
+            </div>
         </ul>
     </nav>
 </template>
@@ -39,7 +41,8 @@ ul {
 
 .cart-button {
     padding: 2rem;
-    float: right;
+    justify-content: center;
+    /* float: right; */
 }
 
 li {
