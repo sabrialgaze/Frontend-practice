@@ -2,19 +2,19 @@
     <div v-if="!isLoading">
         <h1>{{ product?.title }}</h1>
         <img :src="product?.images" alt="">
-        <h2>{{ product?.price }}</h2>
+        <h2>Price: {{ product?.price }}€</h2>
         <h3>{{ product?.description }}</h3>
         <!-- <h2>Role: {{ userRole }}</h2 -->
 
-        <button @click="addElementToCart(product)" class="btn btn-success">"Add to Cart"</button>
+        <button @click="addElementToCart(product)" class="btn btn-success">Add to Cart</button>
     </div>
     <div v-else>Loading...</div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import { useCart } from '../composables/useCart';
-import useProducts from '@/composables/useProducts';
+import useProducts from '../composables/useProducts';
 
 export default defineComponent({
     props: {

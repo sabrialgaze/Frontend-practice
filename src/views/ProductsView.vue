@@ -11,9 +11,9 @@
 
 
 <script lang="ts">
-import useProducts from '@/composables/useProducts';
+import useProducts from '../composables/useProducts';
 import { defineComponent } from 'vue';
-import ProductItem from '@/components/ProductItem.vue';
+import ProductItem from '../components/ProductItem.vue';
 import { useCart } from '../composables/useCart';
 import { Product } from '../models/product';
 import { useRouter } from 'vue-router';

@@ -8,6 +8,13 @@ const routes: Array<RouteRecordRaw> = [
     component: ProductsView
   },
   {
+    path: '/profile',
+    name: 'profile',
+    // beforeEnter: [haveRoleGuard],
+    // lazy loading: no carga los archivos hasta que no se visita este path
+    component: () => import(/* webpackChunkName: "profile" */ '../views/ProfileView.vue')
+  },
+  {
     path: '/detail/:id',
     name: 'detail',
     component: () => import(/* webpackChunkName: "detail" */ '../views/DetailView.vue'),

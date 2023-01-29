@@ -20,7 +20,7 @@ const actions: ActionTree<IProductsState, any> = {
         commit('setProducts', data);
     },
 
-    async fetchProductsById({ commit }, productId: number) {
+    async fetchProductById({ commit }, productId: number) {
         
         // usamos la mutación para poner isLoading = true
         commit('setIsLoading', true);
