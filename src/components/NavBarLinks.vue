@@ -7,17 +7,19 @@
             <li>
                 <router-link :to="{name: 'profile'}">Profile</router-link>
             </li>
-
+            <div class="cart-button"><button @click="toggleCart" class="btn btn-secondary">Cart</button></div>
         </ul>
     </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useCart } from "../composables/useCart";
 
 export default defineComponent({
     setup() {
-        return {}
+        const {toggleCart} = useCart();
+        return {toggleCart}
     },
 })
 </script>
@@ -33,6 +35,11 @@ ul {
     display: flex;
     justify-content: center;
     list-style: none;
+}
+
+.cart-button {
+    padding: 2rem;
+    float: right;
 }
 
 li {

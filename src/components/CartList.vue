@@ -1,13 +1,13 @@
 <template>
     <div class="cart">
         <div class="cart-header">
-            <h2>My Cart{{ cartItems.length }}</h2>
+            <h2>My Cart ({{ cartItems.length }})</h2>
         </div>
         <div class="cart-items">
             <ul>
                 <li v-for="item in cartItems" :key="item.id">
                     <div class="element-name">
-                        {{ item.name }}
+                        {{ item.title }}
                     </div>
                     <div class="actions">
                         <button @click="removeElementFromCart(item)" class="btn btn-danger">Delete</button>
